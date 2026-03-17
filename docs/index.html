@@ -1,0 +1,413 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Dutch">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>
+            14. Tina's Voorbeelden &#8212; Introductie Programmeren met Python
+            Turtle
+        </title>
+        <link rel="stylesheet" href="static/basic.css" type="text/css" />
+        <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+        <link
+            rel="stylesheet"
+            href="static/bootstrap-3.0.0/css/bootstrap.min.css"
+            type="text/css"
+        />
+        <link rel="stylesheet" href="static/datafile.css" type="text/css" />
+        <link rel="stylesheet" href="static/dragndrop.css" type="text/css" />
+        <link rel="stylesheet" href="static/codemirror.css" type="text/css" />
+        <link rel="stylesheet" href="static/activecode.css" type="text/css" />
+        <link rel="stylesheet" href="static/fitb.css" type="text/css" />
+        <link rel="stylesheet" href="static/parsons.css" type="text/css" />
+        <link rel="stylesheet" href="static/lib/prettify.css" type="text/css" />
+        <link rel="stylesheet" href="static/video.css" type="text/css" />
+        <link rel="stylesheet" href="static/showEval.css" type="text/css" />
+        <link rel="stylesheet" href="static/tabbedstuff.css" type="text/css" />
+        <link rel="stylesheet" href="static/pytutor.css" type="text/css" />
+        <link rel="stylesheet" href="static/modal-basic.css" type="text/css" />
+        <link rel="stylesheet" href="static/clickable.css" type="text/css" />
+        <link rel="stylesheet" href="static/poll.css" type="text/css" />
+        <link
+            rel="stylesheet"
+            href="static/jquery-ui-1.10.3.custom.min.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="static/bootstrap-sphinx.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="static/user-highlights.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="static/runestone-custom-sphinx-bootstrap.css"
+            type="text/css"
+        />
+        <script type="text/javascript">
+            var DOCUMENTATION_OPTIONS = {
+                URL_ROOT: "../",
+                VERSION: "0.0",
+                COLLAPSE_INDEX: false,
+                FILE_SUFFIX: ".html",
+                HAS_SOURCE: true,
+                SOURCELINK_SUFFIX: ".txt",
+            };
+        </script>
+        <script type="text/javascript" src="static/runestonebase.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/skulpt.min.js"></script>
+        <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+        <script type="text/javascript" src="static/datafile.js"></script>
+        <script type="text/javascript" src="static/dragndrop.js"></script>
+        <script type="text/javascript" src="static/timeddnd.js"></script>
+        <script
+            type="text/javascript"
+            src="static/jquery.highlight.js"
+        ></script>
+        <script type="text/javascript" src="static/bookfuncs.js"></script>
+        <script type="text/javascript" src="static/codemirror.js"></script>
+        <script type="text/javascript" src="static/xml.js"></script>
+        <script type="text/javascript" src="static/css.js"></script>
+        <script type="text/javascript" src="static/htmlmixed.js"></script>
+        <script type="text/javascript" src="static/python.js"></script>
+        <script type="text/javascript" src="static/javascript.js"></script>
+        <script type="text/javascript" src="static/activecode.js"></script>
+        <script type="text/javascript" src="static/skulpt.min.js"></script>
+        <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+        <script type="text/javascript" src="static/clike.js"></script>
+        <script
+            type="text/javascript"
+            src="static/timed_activecode.js"
+        ></script>
+        <script type="text/javascript" src="static/fitb.js"></script>
+        <script type="text/javascript" src="static/timedfitb.js"></script>
+        <script type="text/javascript" src="static/shortanswer.js"></script>
+        <script
+            type="text/javascript"
+            src="static/timed_shortanswer.js"
+        ></script>
+        <script type="text/javascript" src="static/reveal.js"></script>
+        <script type="text/javascript" src="static/mchoice.js"></script>
+        <script type="text/javascript" src="static/timedmc.js"></script>
+        <script type="text/javascript" src="static/timed.js"></script>
+        <script type="text/javascript" src="static/lib/prettify.js"></script>
+        <script type="text/javascript" src="static/lib/hammer.min.js"></script>
+        <script type="text/javascript" src="static/parsons.js"></script>
+        <script type="text/javascript" src="static/timedparsons.js"></script>
+        <script type="text/javascript" src="static/showEval.js"></script>
+        <script type="text/javascript" src="static/tabbedstuff.js"></script>
+        <script type="text/javascript" src="static/d3.v2.min.js"></script>
+        <script
+            type="text/javascript"
+            src="static/jquery.ba-bbq.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="static/jquery.jsPlumb-1.3.10-all-min.js"
+        ></script>
+        <script type="text/javascript" src="static/pytutor.js"></script>
+        <script type="text/javascript" src="static/codelens.js"></script>
+        <script type="text/javascript" src="static/animationbase.js"></script>
+        <script type="text/javascript" src="static/clickable.js"></script>
+        <script type="text/javascript" src="static/timedclickable.js"></script>
+        <script type="text/javascript" src="static/poll.js"></script>
+        <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        ></script>
+        <script
+            type="text/javascript"
+            src="static/jquery-ui-1.10.3.custom.min.js"
+        ></script>
+        <script type="text/javascript" src="static/jquery-fix.js"></script>
+        <script
+            type="text/javascript"
+            src="static/bootstrap-3.0.0/js/bootstrap.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="static/bootstrap-sphinx.js"
+        ></script>
+        <script type="text/javascript" src="static/waypoints.min.js"></script>
+        <script type="text/javascript" src="static/rangy-core.js"></script>
+        <script type="text/javascript" src="static/rangy-textrange.js"></script>
+        <script
+            type="text/javascript"
+            src="static/rangy-cssclassapplier.js"
+        ></script>
+        <script type="text/javascript" src="static/user-highlights.js"></script>
+        <script
+            type="text/javascript"
+            src="static/jquery.idle-timer.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="static/processing-1.4.1.min.js"
+        ></script>
+        <script type="text/javascript" src="static/jquery.hotkey.js"></script>
+        <script
+            type="text/javascript"
+            src="static/jquery-migrate-1.2.1.min.js"
+        ></script>
+        <link rel="shortcut icon" href="static/turtle_HrK_icon.ico" />
+        <link rel="index" title="Index" href="../genindex.html" />
+        <link rel="search" title="Zoeken" href="../search.html" />
+        <link
+            rel="prev"
+            title="13. Challenge 2: Een tekening met kleur"
+            href="ExtraOpdracht2-Kleur.html"
+        />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+            name="viewport"
+        />
+        <link
+            rel="shortcut icon"
+            href="/runestone/static/favicon.ico"
+            type="image/ico"
+        />
+
+        <script type="text/javascript">
+            eBookConfig = {};
+            eBookConfig.host = "http://127.0.0.1:8000"
+                ? "http://127.0.0.1:8000"
+                : "http://127.0.0.1:8000";
+            eBookConfig.app = eBookConfig.host + "/runestone";
+            eBookConfig.ajaxURL = eBookConfig.app + "/ajax/";
+            eBookConfig.course = "ippt";
+            eBookConfig.logLevel = 0;
+            eBookConfig.loginRequired = false;
+            eBookConfig.build_info = "unknown";
+            eBookConfig.isLoggedIn = false;
+            eBookConfig.useRunestoneServices = false;
+            eBookConfig.python3 = false;
+            eBookConfig.basecourse = "ippt";
+            eBookConfig.runestone_version = "3.0.7";
+        </script>
+    </head>
+    <body>
+        <!-- Begin navbar -->
+        <div
+            id="navbar"
+            class="navbar navbar-default navbar-fixed-top"
+            role="navigation"
+        >
+            <div class="container">
+                <div class="navbar-header">
+                    <button
+                        type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse"
+                    >
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <div>
+                        <a
+                            class="brand-logo"
+                            style="
+                                background: transparent
+                                    url(&quot;static/img/logo_small.png&quot;)
+                                    no-repeat 0px 0px;
+                            "
+                            href="index.html"
+                            >&nbsp;
+                        </a>
+                        <a class="navbar-brand" href="../index.html"
+                            >Introductie Programmeren met Python Turtle</a
+                        >
+                    </div>
+                </div>
+
+                <div class="navbar-collapse collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="divider-vertical"></li>
+
+                        <li class="divider-vertical"></li>
+
+                        <li class="divider-vertical"></li>
+
+                        <li class="divider-vertical"></li>
+
+                        <li class="divider-vertical"></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav">
+                        <li class="divider-vertical"></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="continue-reading"></div>
+
+        <div class="container" id="main-content">
+            <div class="section" id="challenge-3-een-sneeuwvlok">
+                <h1>
+                    Inhaalopdrachten hoofdstuk 3 & 4
+                    <i class="icon-large icon-turtle"></i
+                    ><a
+                        class="headerlink"
+                        href="#challenge-3-een-sneeuwvlok"
+                        title="Permalink naar deze titel"
+                        >¶</a
+                    >
+                </h1>
+                <p>Kies hieronder de opdracht waar je aan gaat werken.</p>
+
+                <div class="input-group">
+                    <select id="source-selection" class="form-control"></select>
+                    <span class="input-group-btn">
+                        <button
+                            id="load-script"
+                            class="btn btn-default"
+                            style="margin: 0px"
+                        >
+                            Load
+                        </button>
+                    </span>
+                </div>
+
+                <div id="description" class="section" style="margin-top: 1em">
+                    <p id="assignment-name-content"></p>
+                    <p id="description-content"></p>
+                </div>
+
+                <div
+                    data-childcomponent="challenge-sneeuwvlok"
+                    class="runestone explainer ac_section alert alert-warning"
+                >
+                    <textarea
+                        data-component="activecode"
+                        id="challenge-sneeuwvlok"
+                        data-lang="python"
+                        data-timelimit="25000"
+                        data-audio=""
+                        data-caption=""
+                        data-enabledownload="true"
+                    >
+import turtle
+tina = turtle.Turtle()
+tina.shape("turtle")
+tina.speed(10)
+
+
+
+
+
+
+
+
+</textarea
+                    >
+                </div>
+            </div>
+
+            <script>
+                var external_imports = [
+                    {
+                        title: "Sterren",
+                        url: "https://raw.githubusercontent.com/kooi/python-turtle-snippets/refs/heads/master/pixel_art.py",
+                        description: "",
+                        assignment: "sterren",
+                    },
+                    {
+                        title: "Huizen (1)",
+                        url: "https://raw.githubusercontent.com/kooi/python-turtle-snippets/refs/heads/master/pixel_popart.py",
+                        description: "",
+                        assignment: "huizen-1",
+                    },
+                    {
+                        title: "Huizen (2)",
+                        url: "https://raw.githubusercontent.com/kooi/python-turtle-snippets/refs/heads/master/move_onclick.py",
+                        description: "",
+                        assignment: "huizen-2",
+                    },
+                    {
+                        title: "Polygonen",
+                        url: "https://raw.githubusercontent.com/kooi/python-turtle-snippets/refs/heads/master/colorfill_random_with_bias.py",
+                        description: "",
+                        assignment: "polygonen",
+                    },
+                    {
+                        title: "Hexagon",
+                        url: "https://raw.githubusercontent.com/kooi/python-turtle-snippets/refs/heads/master/bezier-random.py",
+                        description: "",
+                        assignment: "hexagon",
+                    },
+                    {
+                        title: "Gekleurde envelop",
+                        url: "https://raw.githubusercontent.com/kooi/python-turtle-snippets/refs/heads/master/trees/random_colored_layered.py",
+                        description: "",
+                        assignment: "envelop",
+                    },
+                ];
+
+                document
+                    .getElementById("load-script")
+                    .addEventListener("click", (e) => {
+                        let ss = document.getElementById("source-selection");
+                        let dsc = document.getElementById(
+                            "description-content",
+                        );
+                        let ass = document.getElementById(
+                            "assignment-name-content",
+                        );
+
+                        let xml = new XMLHttpRequest();
+                        xml.open("GET", ss.selectedOptions[0].value, true);
+                        xml.onload = function () {
+                            if (this.status == 200) {
+                                edList["challenge-sneeuwvlok"].editor.setValue(
+                                    this.responseText,
+                                );
+                                dsc.innerHTML =
+                                    external_imports[ss.selectedIndex][
+                                        "description"
+                                    ];
+                                ass.innerHTML =
+                                    external_imports[ss.selectedIndex][
+                                        "assignment"
+                                    ];
+                            }
+                        };
+                        xml.send();
+                    });
+
+                window.addEventListener(
+                    "load",
+                    () => {
+                        let ss = document.getElementById("source-selection");
+
+                        external_imports.forEach((e) => {
+                            let option = document.createElement("option");
+                            option.text = e.title;
+                            option.value = e.url;
+                            ss.add(option);
+                        });
+                    },
+                    { once: true },
+                );
+            </script>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p class="pull-right">| <a href="#">Back to top</a></p>
+                <p></p>
+            </div>
+        </footer>
+    </body>
+</html>
