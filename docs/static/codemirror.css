@@ -148,7 +148,7 @@ div.CodeMirror-overwrite div.CodeMirror-cursor {
     color: #085;
 }
 .cm-s-default .cm-comment {
-    color: lightgrey;
+    color: #f50;
 }
 .cm-s-default .cm-string {
     color: #a11;

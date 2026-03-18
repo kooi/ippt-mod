@@ -120,7 +120,7 @@ ActiveCode.prototype.createEditor = function (index) {
   // give the user a visual cue that they have changed but not saved
   editor.on(
     "change",
-    function () {
+    function (e) {
       if (editor.acEditEvent == false || editor.acEditEvent === undefined) {
         $(editor.getWrapperElement()).css("border-top", "2px solid #b43232");
         $(editor.getWrapperElement()).css("border-bottom", "2px solid #b43232");
@@ -454,12 +454,11 @@ ActiveCode.prototype.downloadFile = function (lang) {
     textToWrite =
       textToWrite +
       "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" +
-      "### id=" +
-      id +
-      " ###" +
-      "### md5=" +
-      hex_md5(textToWrite) +
-      " ###";
+      `### BEGIN SIGNATURE ###\r\n` +
+      `### id=${id} ###\r\n` +
+      `### md5=${hex_md5(textToWrite)} ###\r\n`;
+    // + `### hist=${JSON.stringify(this.editor.getHistory())} ###\r\n`;
+    console.log(textToWrite);
     var textFileAsBlob = new Blob([textToWrite], { type: "text/plain" });
 
     if ("msSaveOrOpenBlob" in navigator) {
