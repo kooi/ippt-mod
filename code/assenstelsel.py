@@ -16,7 +16,7 @@ def teken_pos_x_as(n, step=50, tick=10, width=2, show_tick=False):
             tina.penup()
         tina.forward(tick)
         tina.backward(2*tick)
-        tina.write(" "+str(i*step))
+        tina.write(" "+str((i+1)*step))
         tina.forward(tick)
         if not show_tick:
             tina.pendown()
@@ -36,7 +36,7 @@ def teken_neg_x_as(n, step=50, tick=10, width=2, show_tick=False):
             tina.penup()
         tina.forward(tick)
         tina.backward(2*tick)
-        tina.write(" "+str(i*step))
+        tina.write(" -"+str((i+1)*step))
         tina.forward(tick)
         if not show_tick:
             tina.pendown()
