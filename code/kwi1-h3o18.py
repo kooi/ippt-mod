@@ -9,13 +9,6 @@ tina.speed(3)
 S = 20 # schaalfactor
 # Tina werkt opgave 18 uit:
 
-import turtle
-tina = turtle.Turtle()
-tina.shape("turtle")
-tina.speed(3)
-
-S = 20
-
 coords = [
     (0,8),
     (1,3),
