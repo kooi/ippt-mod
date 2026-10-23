@@ -1,0 +1,58 @@
+# Kern Wiskunde V1
+# H3 opg. 19
+
+import turtle
+tina = turtle.Turtle()
+tina.shape("turtle")
+tina.speed(3)
+
+S = 20 # schaalfactor
+# Wat tekent tina?
+
+coords = [
+    (-5,0),
+    (-4,2),
+    (-6,4),
+    (-4,6),
+    (-2,4),
+    (-2,7),
+    (-1,8),
+    (1,8),
+    (2,7),
+    (2,4),
+    (4,6),
+    (6,4),
+    (4,2),
+    (5,0),
+    (5,-4),
+    (4,-5),
+    (6,-7),
+    (4,-9),
+    (2,-6),
+    (1,-7),
+    (-1,-7),
+    (-2, -6),
+    (-4,-9),
+    (-6,-7),
+    (-4,-5),
+    (-5,-4),
+    (-5,0)
+]
+
+tina.penup()
+
+tina.fillcolor("light green")
+tina.pencolor("green")
+tina.begin_fill()
+for x, y in coords:
+    tina.goto(x*S, y*S)
+    tina.pendown()
+    tina.dot(4)
+    tina.write("("+str(x)+","+str(y)+")")
+tina.end_fill()
+
+
+
+
+
+
